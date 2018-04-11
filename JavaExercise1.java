@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class JavaExercise1 {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);	// instantiating a scanner for reading a user input.
         System.out.println("Please enter a number: ");
-        int maxNum = Integer.parseInt(scan.nextLine());
+        int maxNum = Integer.parseInt(scan.nextLine());	// parsing string to int.
         SimpleForLoop forLoop = new SimpleForLoop(maxNum);
         forLoop.ExecuteForLoop();
     }
@@ -21,6 +21,7 @@ class SimpleForLoop {
         this.MAX_NUM = maxNum;
     }
 
+	// for loop body.
     public void ExecuteForLoop() {
         System.out.println("Starting a for loop.");
         for (int i = 0; i < MAX_NUM; i++) {
