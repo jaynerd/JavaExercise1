@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class JavaExercise1 {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);  // instantiating a scanner object for reading inputs.
+        // instantiating a scanner object to get inputs.
+        Scanner scan = new Scanner(System.in);
 
         // simple for loop exercise.
         System.out.println("Please enter a number: ");
@@ -14,10 +15,19 @@ public class JavaExercise1 {
         forLoop.ExecuteForLoop();   // start for loop.
 
         // simple if exercise.
-        System.out.println("Please enter true of false: ");
+        System.out.println("\n" + "Please enter true or false: ");
         boolean condition = scan.nextBoolean();
+        scan.nextLine();
         SimpleIf simpleIf = new SimpleIf(condition);
         simpleIf.ReverseCondition();
+
+        // concatenation vs addition exercise.
+        System.out.println("\n" + "Please enter a number: ");
+        int a = Integer.parseInt(scan.nextLine());
+        System.out.println("Please enter another number: ");
+        int b = Integer.parseInt(scan.nextLine());
+        ConcateVsAdd cvsa = new ConcateVsAdd(a, b);
+        cvsa.ShowComparison();
     }
 }
 
@@ -29,7 +39,6 @@ class SimpleForLoop {
         this.MAX_NUM = maxNum;
     }
 
-    // for loop body.
     public void ExecuteForLoop() {
         System.out.println("Starting a for loop.");
         for (int i = 0; i < MAX_NUM; i++) {
@@ -46,15 +55,29 @@ class SimpleIf {
         this.condition = condition;
     }
 
-    // if body.
     public void ReverseCondition() {
         System.out.println("Current condition: " + condition);
-        // reversing condition.
         if (condition) {
             condition = false;
         } else {
             condition = true;
         }
         System.out.println("Reversed condition: " + condition);
+    }
+}
+
+class ConcateVsAdd {
+
+    private final int a;
+    private final int b;
+
+    public ConcateVsAdd(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public void ShowComparison() {
+        System.out.println("Number " + a + " and number " + b + " concatenated: " + a + b);
+        System.out.println("Number " + a + " and number " + b + " added: " + (a + b));
     }
 }
