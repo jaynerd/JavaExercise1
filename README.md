@@ -11,3 +11,4 @@ of Technology.
 ### List of Exercises
 
 	1) ASCII Exercises
+	2) Concatenation Exercises
