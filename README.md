@@ -12,3 +12,4 @@ of Technology.
 
 	1) ASCII Exercises
 	2) Concatenation Exercises
+	3) Variable Assigning Exercises (constant)
